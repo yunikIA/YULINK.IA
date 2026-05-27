@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yulink IA — Automatización con Inteligencia Artificial</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==========================================
+       NAVBAR
+       ========================================== -->
+  <nav>
+    <a href="#" class="logo">yulink<span>.IA</span></a>
+
+    <ul class="nav-links">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">☀️</button>
+      <a href="#servicios" class="btn-nav">Ver servicios</a>
+    </div>
+  </nav>
+
+
+  <!-- ==========================================
+       HERO
+       ========================================== -->
+  <section class="hero">
+
+    <!-- Robot mascota YULI -->
+    <div class="mascot-wrap" id="mascot">
+      <svg viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg" width="200">
+        <!-- Cuerpo -->
+        <rect x="40" y="110" width="120" height="120" rx="24" fill="#FF6B00" opacity="0.92"/>
+        <rect x="55" y="125" width="90" height="70" rx="12" fill="rgba(0,0,0,0.25)"/>
+        <!-- Ojos cuerpo -->
+        <circle cx="80"  cy="155" r="12" fill="#fff"/>
+        <circle cx="120" cy="155" r="12" fill="#fff"/>
+        <circle cx="83"  cy="155" r="6"  fill="#0a0a0a"/>
+        <circle cx="123" cy="155" r="6"  fill="#0a0a0a"/>
+        <circle cx="85"  cy="153" r="2"  fill="#fff"/>
+        <circle cx="125" cy="153" r="2"  fill="#fff"/>
+        <!-- Boca cuerpo -->
+        <path d="M85 180 Q100 192 115 180" stroke="#fff" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <!-- Cabeza -->
+        <rect x="55" y="50" width="90" height="70" rx="18" fill="#1a1a1a"/>
+        <rect x="62" y="57" width="76" height="56" rx="12" fill="#222"/>
+        <!-- Antena -->
+        <line x1="100" y1="50" x2="100" y2="25" stroke="#FF6B00" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="100" cy="20" r="6" fill="#FF6B00"/>
+        <circle cx="100" cy="20" r="3" fill="#FFB366"/>
+        <!-- Ojos cabeza -->
+        <circle cx="82"  cy="78" r="9" fill="#FF6B00" opacity="0.9"/>
+        <circle cx="118" cy="78" r="9" fill="#FF6B00" opacity="0.9"/>
+        <circle cx="82"  cy="78" r="5" fill="#fff"/>
+        <circle cx="118" cy="78" r="5" fill="#fff"/>
+        <circle cx="84"  cy="77" r="2" fill="#0a0a0a"/>
+        <circle cx="120" cy="77" r="2" fill="#0a0a0a"/>
+        <!-- Boca cabeza -->
+        <path d="M88 96 Q100 104 112 96" stroke="#FF6B00" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <!-- Cuello -->
+        <rect x="88" y="118" width="24" height="14" rx="4" fill="#222"/>
+        <!-- Brazos -->
+        <rect x="12"  y="118" width="30" height="14" rx="7" fill="#FF6B00" opacity="0.85"/>
+        <rect x="158" y="118" width="30" height="14" rx="7" fill="#FF6B00" opacity="0.85"/>
+        <!-- Piernas -->
+        <rect x="60"  y="228" width="28" height="36" rx="10" fill="#FF6B00" opacity="0.85"/>
+        <rect x="112" y="228" width="28" height="36" rx="10" fill="#FF6B00" opacity="0.85"/>
+        <!-- Detalle pecho -->
+        <circle cx="100" cy="175" r="8" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+        <circle cx="100" cy="175" r="4" fill="#FFB366" opacity="0.8"/>
+      </svg>
+    </div>
+
+    <div class="hero-badge">Automatización Inteligente</div>
+    <h1>HOLA, SOY <span class="accent">YULI</span><br/>Tu IA de confianza</h1>
+    <p>Automatizamos tus procesos con inteligencia artificial para que tu negocio trabaje más rápido, escale sin límites y enfoque su energía en lo que realmente importa.</p>
+    <div class="hero-ctas">
+      <a href="#servicios" class="btn-primary">Ver servicios →</a>
+      <a href="#" class="btn-secondary">Contactar</a>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       STATS
+       ========================================== -->
+  <div class="stats-row">
+    <div class="stat">
+      <span class="stat-value">100%</span>
+      <span class="stat-label">IA LOCAL</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value">24/7</span>
+      <span class="stat-label">DISPONIBLE</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value">∞</span>
+      <span class="stat-label">ESCALABLE</span>
+    </div>
+  </div>
+
+
+  <!-- ==========================================
+       SERVICIOS
+       ========================================== -->
+  <section id="servicios">
+    <p class="section-label">◈ Cosas que hacemos</p>
+    <h2 class="section-title">Nuestros Servicios</h2>
+    <p class="section-sub">Herramientas y soluciones construidas con IA para potenciar tu negocio</p>
+
+    <div class="services-grid">
+
+      <div class="service-card featured">
+        <span class="service-tag">🚀 Disponible ahora</span>
+        <span class="service-icon">🤖</span>
+        <div class="service-title">Chatbots con IA</div>
+        <p class="service-desc">Automatizá la atención al cliente con bots inteligentes entrenados con el conocimiento de tu negocio. Disponibles 24/7.</p>
+        <a href="#" class="service-link">Saber más →</a>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">⚡</span>
+        <div class="service-title">Automatización de Procesos</div>
+        <p class="service-desc">Conectamos tus sistemas, eliminamos tareas manuales y hacemos que todo fluya sin intervención humana.</p>
+        <a href="#" class="service-link">Saber más →</a>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">📊</span>
+        <div class="service-title">Análisis de Datos</div>
+        <p class="service-desc">Convertimos tus datos en decisiones. Dashboards inteligentes, reportes automáticos e insights accionables en tiempo real.</p>
+        <a href="#" class="service-link">Saber más →</a>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">🔗</span>
+        <div class="service-title">Integraciones API</div>
+        <p class="service-desc">Conectamos tus apps favoritas: CRM, ecommerce, WhatsApp, redes sociales y más — todo sincronizado automáticamente.</p>
+        <a href="#" class="service-link">Saber más →</a>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">💡</span>
+        <div class="service-title">Consultoría IA</div>
+        <p class="service-desc">Te guiamos en tu transformación digital. Identificamos oportunidades de automatización y diseñamos la estrategia ideal.</p>
+        <a href="#" class="service-link">Contactar →</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <a href="#" class="logo">yulink<span>.IA</span></a>
+    <div class="footer-links">
+      <a href="mailto:info@yulink.ai">info@yulink.ai</a>
+      <a href="#">@yulink_ia</a>
+      <a href="#">yulink.ai</a>
+    </div>
+    <span class="footer-copy">© 2025 yulink.IA · Todos los derechos reservados</span>
+  </footer>
+
+
+  <!-- ==========================================
+       CHAT FLOTANTE — YULI
+       ========================================== -->
+  <div class="yuni-float">
+    <div class="yuni-bubble" id="yuniBubble">¡Hola! ¿En qué puedo ayudarte? 👋</div>
+    <button class="yuni-btn" id="yuniBtn" aria-label="Abrir chat YULI">🔮</button>
+  </div>
+
+  <!-- Panel de chat -->
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-header">
+      <div>
+        <div class="chat-header-title">YULI — yulink.IA</div>
+        <div class="chat-header-sub">● En línea</div>
+      </div>
+      <button class="chat-close" id="chatClose">✕</button>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="msg bot">¡Hola! Soy YULI, la IA de yulink. ¿En qué te puedo ayudar hoy?</div>
+    </div>
+
+    <div class="chat-opts" id="chatOpts">
+      <button class="chat-opt" data-msg="¿Qué es yulink.IA?">¿Qué es yulink.IA?</button>
+      <button class="chat-opt" data-msg="Ver servicios">Ver servicios</button>
+      <button class="chat-opt" data-msg="Contactar">Contactar</button>
+    </div>
+
+    <div class="chat-input-row">
+      <input class="chat-input" type="text" placeholder="Escribí tu pregunta…" id="chatInput" />
+      <button class="chat-send" id="chatSend">➤</button>
+    </div>
+  </div>
+
+
+  <!-- Script principal -->
+  <script src="main.js"></script>
+</body>
+</html>
