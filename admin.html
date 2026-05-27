@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — yulink.IA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <div id="adminApp">
+
+    <!-- =============================
+         PANTALLA DE LOGIN
+         ============================= -->
+    <div id="loginScreen" class="admin-screen">
+      <div class="admin-card">
+        <a href="/" class="logo" style="justify-content:center;margin-bottom:2rem;">yulink<span>.IA</span></a>
+        <h2>Panel de Administración</h2>
+        <p class="admin-sub">Iniciá sesión con tu cuenta de Google autorizada</p>
+        <button class="btn-google" id="btnGoogleLogin">
+          <svg width="20" height="20" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="m6.306 14.691 6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>
+          Iniciar sesión con Google
+        </button>
+        <p class="admin-error" id="loginError"></p>
+      </div>
+    </div>
+
+    <!-- =============================
+         PANTALLA NO AUTORIZADO
+         ============================= -->
+    <div id="unauthorizedScreen" class="admin-screen" style="display:none;">
+      <div class="admin-card">
+        <div class="admin-emoji">🚫</div>
+        <h2>Acceso denegado</h2>
+        <p>Tu cuenta no está autorizada para acceder al panel.</p>
+        <p class="admin-sub">Contactá al administrador del proyecto.</p>
+        <button class="btn-secondary" onclick="logout()">Cerrar sesión</button>
+      </div>
+    </div>
+
+    <!-- =============================
+         DASHBOARD ADMIN
+         ============================= -->
+    <div id="dashboardScreen" class="admin-screen" style="display:none;">
+      <nav class="admin-nav">
+        <a href="/" class="logo" style="font-size:1rem;">yulink<span>.IA</span></a>
+        <span style="color:var(--text2);font-size:0.85rem;" id="adminEmailDisplay"></span>
+        <button class="btn-nav" onclick="logout()" style="background:transparent;border:1px solid var(--border);color:var(--text);">Cerrar sesión</button>
+      </nav>
+
+      <div class="admin-dashboard">
+        <h1>Panel de Control</h1>
+
+        <!-- Tabs -->
+        <div class="admin-tabs">
+          <button class="admin-tab active" data-tab="contact">📇 Contacto</button>
+          <button class="admin-tab" data-tab="admins">👥 Admins</button>
+        </div>
+
+        <!-- === TAB CONTACTO === -->
+        <div id="tabContact" class="admin-tab-content active">
+          <div class="admin-grid">
+            <div class="admin-field">
+              <label>Email</label>
+              <input type="email" id="fieldEmail" placeholder="info@yulink.ai" />
+            </div>
+            <div class="admin-field">
+              <label>Teléfono</label>
+              <input type="text" id="fieldPhone" placeholder="+54 11 1234-5678" />
+            </div>
+            <div class="admin-field">
+              <label>WhatsApp (con código país, sin +)</label>
+              <input type="text" id="fieldWhatsapp" placeholder="5491123456789" />
+            </div>
+            <div class="admin-field">
+              <label>Instagram</label>
+              <input type="text" id="fieldInstagram" placeholder="@yulink_ia" />
+            </div>
+            <div class="admin-field">
+              <label>LinkedIn</label>
+              <input type="text" id="fieldLinkedin" placeholder="linkedin.com/company/yulink-ia" />
+            </div>
+            <div class="admin-field">
+              <label>Dirección</label>
+              <input type="text" id="fieldAddress" placeholder="Buenos Aires, Argentina" />
+            </div>
+          </div>
+          <button class="btn-primary" id="btnSaveContact">💾 Guardar cambios</button>
+          <p class="admin-toast" id="contactToast"></p>
+        </div>
+
+        <!-- === TAB ADMINS === -->
+        <div id="tabAdmins" class="admin-tab-content">
+          <div class="admin-field" style="max-width:400px;">
+            <label>Agregar admin por email</label>
+            <div style="display:flex;gap:8px;">
+              <input type="email" id="fieldNewAdmin" placeholder="email@ejemplo.com" style="flex:1;" />
+              <button class="btn-primary" id="btnAddAdmin">Agregar</button>
+            </div>
+          </div>
+          <h3 style="margin-top:2rem;margin-bottom:1rem;">Admins actuales</h3>
+          <ul class="admin-list" id="adminsList"></ul>
+          <p class="admin-toast" id="adminsToast"></p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

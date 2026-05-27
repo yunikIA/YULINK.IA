@@ -24,7 +24,7 @@
     <ul class="nav-links">
       <li><a href="#">Inicio</a></li>
       <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#">Contacto</a></li>
+      <li><a href="#contacto">Contacto</a></li>
     </ul>
 
     <div class="nav-right">
@@ -164,14 +164,55 @@
 
 
   <!-- ==========================================
+       CONTACTO
+       ========================================== -->
+  <section id="contacto">
+    <p class="section-label">◈ Conectemos</p>
+    <h2 class="section-title">Contacto</h2>
+    <p class="section-sub">Estemos en contacto. Respondemos rápido.</p>
+
+    <div class="contact-grid" id="contactGrid">
+      <a class="contact-item" id="contactEmail" href="mailto:info@yulink.ai">
+        <span class="contact-icon">✉️</span>
+        <span class="contact-label">Email</span>
+        <span class="contact-value">info@yulink.ai</span>
+      </a>
+      <a class="contact-item" id="contactPhone" href="tel:+5491123456789">
+        <span class="contact-icon">📞</span>
+        <span class="contact-label">Teléfono</span>
+        <span class="contact-value">+54 9 11 2345-6789</span>
+      </a>
+      <a class="contact-item" id="contactWhatsapp" href="#" target="_blank">
+        <span class="contact-icon">💬</span>
+        <span class="contact-label">WhatsApp</span>
+        <span class="contact-value">Chatear ahora</span>
+      </a>
+      <a class="contact-item" id="contactInstagram" href="#" target="_blank">
+        <span class="contact-icon">📸</span>
+        <span class="contact-label">Instagram</span>
+        <span class="contact-value">@yulink_ia</span>
+      </a>
+      <a class="contact-item" id="contactLinkedin" href="#" target="_blank">
+        <span class="contact-icon">💼</span>
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value">yulink.IA</span>
+      </a>
+      <div class="contact-item" id="contactAddress">
+        <span class="contact-icon">📍</span>
+        <span class="contact-label">Dirección</span>
+        <span class="contact-value">Buenos Aires, Argentina</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
        FOOTER
        ========================================== -->
   <footer>
-    <a href="#" class="logo">yulink<span>.IA</span></a>
-    <div class="footer-links">
+    <a href="/" class="logo">yulink<span>.IA</span></a>
+    <div class="footer-links" id="footerLinks">
       <a href="mailto:info@yulink.ai">info@yulink.ai</a>
       <a href="#">@yulink_ia</a>
-      <a href="#">yulink.ai</a>
     </div>
     <span class="footer-copy">© 2025 yulink.IA · Todos los derechos reservados</span>
   </footer>
@@ -211,6 +252,12 @@
     </div>
   </div>
 
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="firebase-config.js"></script>
 
   <!-- Script principal -->
   <script src="main.js"></script>

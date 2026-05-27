@@ -1,0 +1,214 @@
+/* =============================================
+   yulink.IA — Admin Panel Styles
+   ============================================= */
+
+.admin-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.admin-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2.5rem;
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+}
+
+.admin-card h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.admin-sub {
+  color: var(--text2);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.admin-error {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  min-height: 1.2em;
+}
+
+.admin-emoji {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Botón Google */
+.btn-google {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: box-shadow 0.2s;
+}
+
+.btn-google:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Navegación admin */
+.admin-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-dashboard {
+  max-width: 700px;
+  width: 100%;
+  margin: 80px auto 2rem;
+  padding: 0 2rem;
+}
+
+.admin-dashboard h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Tabs */
+.admin-tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--bg3);
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 2rem;
+}
+
+.admin-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  color: var(--text2);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.admin-tab.active {
+  background: var(--orange);
+  color: #fff;
+}
+
+.admin-tab-content { display: none; }
+.admin-tab-content.active { display: block; }
+
+/* Grid campos */
+.admin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-field label {
+  font-size: 0.78rem;
+  color: var(--text2);
+  font-weight: 500;
+}
+
+.admin-field input {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.admin-field input:focus {
+  border-color: var(--orange);
+}
+
+/* Lista admins */
+.admin-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+}
+
+.admin-list .remove-btn {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-family: 'DM Sans', sans-serif;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.admin-list .remove-btn:hover {
+  background: rgba(231, 76, 60, 0.1);
+}
+
+/* Toast */
+.admin-toast {
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  min-height: 1.2em;
+  color: var(--text2);
+  transition: opacity 0.3s;
+}
+
+.admin-toast.success { color: #2ecc71; }
+.admin-toast.error { color: #e74c3c; }
+
+@media (max-width: 640px) {
+  .admin-grid { grid-template-columns: 1fr; }
+  .admin-card { padding: 1.5rem; }
+}
