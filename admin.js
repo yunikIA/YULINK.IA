@@ -45,8 +45,15 @@ btnGoogleLogin.addEventListener('click', () => {
 async function checkIsAdmin(email) {
   try {
     const doc = await db.collection('admins').doc(email).get();
+    console.log('Admin check:', email, 'exists:', doc.exists);
+    if (!doc.exists) {
+      console.log('Document not found. Available admins:');
+      const snap = await db.collection('admins').get();
+      snap.forEach(d => console.log(' -', d.id));
+    }
     return doc.exists;
-  } catch {
+  } catch (err) {
+    console.error('Firestore error en checkIsAdmin:', err);
     return false;
   }
 }
